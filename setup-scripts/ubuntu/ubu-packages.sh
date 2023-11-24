@@ -5,6 +5,10 @@ sudo apt-get update
 sudo apt-get install -y curl wget git zip
 sudo apt-get install -y software-properties-common
 
+# (OPTIONAL)Nala is a front-end for libapt-pkg. Specifically we interface using the python-apt api.
+# Nala works with apt-get to have a better view of instalations
+sudo apt install -y nala
+
 =----------------------------------------------
 # PYTHON
 sudo apt-get install -y python3-dev python3-pip
