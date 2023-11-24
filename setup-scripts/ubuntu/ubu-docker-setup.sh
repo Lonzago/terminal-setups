@@ -26,4 +26,4 @@ sudo chmod 666 /var/run/docker.sock
 =----------------------------------------------
 
 # Lazydocker
-curl https://raw.githubusercontent.com/jesseduffield/lazydocker/master/scripts/install_update_linux.sh | bash
+curl https://raw.githubusercontent.com/jesseduffield/lazydocker/master/scripts/install_update_linux.sh | sudo bash
