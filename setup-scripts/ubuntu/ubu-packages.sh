@@ -3,7 +3,7 @@
 ## PACKAGES INSTALLATIONS
 sudo apt-get update
 
-sudo apt-get install -y curl wget
+sudo apt-get install -y curl wget git
 
 =----------------------------------------------
 
