@@ -35,6 +35,6 @@ function find_fzf_dir() {
 	if [ -n "$selected_dir" ]; then
 		cd "$selected_dir" || return
 	else
-		echo "No directory selected. AAAA"
+		echo "No directory selected."
 	fi
 }

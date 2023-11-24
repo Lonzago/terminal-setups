@@ -2,7 +2,7 @@
 
 ## PACKAGES INSTALLATIONS
 sudo apt-get update
-sudo apt-get install -y curl wget git
+sudo apt-get install -y curl wget git zip
 sudo apt-get install -y software-properties-common
 
 =----------------------------------------------
@@ -10,9 +10,21 @@ sudo apt-get install -y software-properties-common
 sudo apt-get install -y python3-dev python3-pip
 
 # NeoVim UBUNTU
-sudo add-apt-repository ppa:neovim-ppa/stable
-sudo apt-get update
-sudo apt-get -y install neovim
+#sudo add-apt-repository ppa:neovim-ppa/stable
+#sudo apt-get update
+#sudo apt-get -y install neovim
+
+CURRENT_FOLDER=pwd
+cd /tmp
+curl -LO https://github.com/neovim/neovim/releases/latest/download/nvim.appimage
+sudo chmod u+x nvim.appimage
+./nvim.appimage
+./nvim.appimage --appimage-extract
+./squashfs-root/AppRun --version
+# Optional: exposing nvim globally.
+sudo mv squashfs-root /
+sudo ln -s /squashfs-root/AppRun /usr/bin/nvim
+cd $CURRENT_FOLDER
 
 # NeoVim optional packages
 ## FZF terminal searcher

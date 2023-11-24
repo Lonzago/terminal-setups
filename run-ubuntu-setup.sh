@@ -33,12 +33,15 @@ read install_all
 
 if [ "$install_all" = "y" ]; then
 	install_basics
+	add_bashconfig
+	add_lazyvim_configuration
 	install_docker
+
 else
 	## BASICS
 	add_separator
 	echo 'Install Ubuntu basic packages? (y/n): '
-	local read basic_packages
+	read basic_packages
 	if [ "$basic_packages" = "y" ]; then
 		install_basics
 	else
