@@ -3,7 +3,7 @@
 ## PACKAGES INSTALLATIONS
 sudo apt-get update
 sudo apt-get install -y curl wget git
-sudo apt-get install software-properties-common
+sudo apt-get install -y software-properties-common
 
 =----------------------------------------------
 # PYTHON
@@ -12,7 +12,7 @@ sudo apt-get install -y python3-dev python3-pip
 # NeoVim UBUNTU
 sudo add-apt-repository ppa:neovim-ppa/stable
 sudo apt-get update
-sudo apt-get install neovim
+sudo apt-get -y install neovim
 
 # NeoVim optional packages
 ## FZF terminal searcher
@@ -21,7 +21,7 @@ sudo apt-get install -y fzf
 export FZF_DEFAULT_COMMAND='fdfind .'
 export FZF_DEFAULT_OPTS='--height 50% --layout=reverse --border'
 
-sudo apt-get install ripgrep
+sudo apt-get install -y ripgrep
 
 # Lazygit
 LAZYGIT_VERSION=$(curl -s "https://api.github.com/repos/jesseduffield/lazygit/releases/latest" | grep -Po '"tag_name": "v\K[^"]*')

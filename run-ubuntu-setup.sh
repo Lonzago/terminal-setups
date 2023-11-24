@@ -1,10 +1,10 @@
 #!/bin/bash
 
-install-basics() {
+install_basics() {
 	echo 'Installing Ubuntu Basic packages'
 	sh ./setup-scripts/ubuntu/ubu-packages.sh
 }
-install-docker() {
+install_docker() {
 	echo 'Installing Ubuntu Docker packages'
 	sh ./setup-scripts/ubuntu/ubu-docker-setup.sh
 }
@@ -15,16 +15,16 @@ read install_all
 
 if [ "$install_all" = "y" ]; then
 
-	install-basics
-	install-docker
+	install_basics
+	install_docker
 
 else
 
 	echo 'Install Ubuntu basic packages? (y/n): '
-	read basic_packages
+	local read basic_packages
 	if [ "$basic_packages" = "y" ]; then
 
-		install-basics
+		install_basics
 
 	else
 
@@ -37,7 +37,7 @@ else
 
 	if [ "$docker_packages" = "y" ]; then
 
-		install-docker
+		install_docker
 
 	else
 
