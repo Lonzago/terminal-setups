@@ -38,3 +38,16 @@ function find_fzf_dir() {
 		echo "No directory selected."
 	fi
 }
+
+## (Optional) Nala integration
+apt() { 
+  command nala "$@"
+}
+sudo() {
+  if [ "$1" = "apt" ]; then
+    shift
+    command sudo nala "$@"
+  else
+    command sudo "$@"
+  fi
+}

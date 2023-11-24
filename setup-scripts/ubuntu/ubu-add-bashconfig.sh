@@ -2,4 +2,5 @@
 
 cat ./config-files/.bashrc-config >>$HOME/.bashrc
 sleep 1
-source $HOME/.bashrc
+source ~/.bashrc
+#source $HOME/.bashrc

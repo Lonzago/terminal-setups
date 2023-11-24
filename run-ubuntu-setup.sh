@@ -1,4 +1,4 @@
-#!/bin/bash
+#!/bin/bash -i
 
 add_separator() {
 	echo ===========================================
@@ -19,7 +19,7 @@ install_docker() {
 add_bashconfig() {
 	add_separator
 	echo 'Adding Bahs configuration'
-	sh ./setup-scripts/ubuntu/ubu-add-bashconfig.sh
+	source ./setup-scripts/ubuntu/ubu-add-bashconfig.sh
 }
 add_lazyvim_configuration() {
 	add_separator
