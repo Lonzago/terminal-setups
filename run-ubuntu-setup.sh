@@ -3,7 +3,7 @@
 echo 'Install Ubuntu basic packages? (y/n)'
 read basic_packages
 
-if ["basic_packages"=="y"]; then
+if ["$basic_packages"=="y"]; then
 	echo 'Installing Ubuntu Basic packages'
 	sudo sh ./setup-scripts/ubuntu/ubu-packages.sh
 else
@@ -13,7 +13,7 @@ fi
 echo 'Install Ubuntu docker packages? (y/n)'
 read docker_packages
 
-if ["docker_packages"=="y"]; then
+if ["$docker_packages"=="y"]; then
 	echo 'Installing Ubuntu Docker packages'
 	sudo sh ./setup-scripts/ubuntu/ubu-docker-setup.sh
 else
