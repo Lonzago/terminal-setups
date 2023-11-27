@@ -12,6 +12,7 @@ Set-Alias tt tree
 Set-Alias ll ls
 Set-Alias ldo lazydocker
 Set-Alias lg lazygit
+Set-Alias cl clear
 
 # FZF Implemetations
 $env:FZF_DEFAULT_OPTS='--height 40% --layout=reverse --border'
