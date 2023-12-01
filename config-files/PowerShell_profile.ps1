@@ -1,3 +1,6 @@
+# Z to remember dir
+Import-Module z
+
 
 ## OH-MY-POSH
 Import-Module Terminal-Icons
