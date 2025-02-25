@@ -28,8 +28,8 @@ function fd {
   )
   Get-ChildItem -Directory -Recurse -Depth $Depth -ErrorAction SilentlyContinue | ForEach-Object { $_.FullName } | fzf | ForEach-Object { cd $_ } 
 }
-function fd-root { cd \ &&  fd }
-function fd-user { cd $HOME &&  fd }
+function fd-root { cd \ ;  fd }
+function fd-user { cd $HOME ;  fd }
 
 
 ## EXIT FROM TERMINAL
