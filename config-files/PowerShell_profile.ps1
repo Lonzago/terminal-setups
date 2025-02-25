@@ -1,10 +1,15 @@
+## Copy this file to $PROFILE
+## Copy-Item -Path .\PowerShell_profile.ps1 -Destination $PROFILE
+
+
 # Z to remember dir
 Import-Module z
-
+# Terminal-Icons
+Import-Module -Name Terminal-Icons
 
 ## OH-MY-POSH
-Import-Module Terminal-Icons
-oh-my-posh init pwsh --config 'C:\Users\GonDev\AppData\Local\Programs\oh-my-posh\themes\atomic.omp.json' | Invoke-Expression
+# THEMES:poshmon, powerlevel10k_rainbow, atomic
+oh-my-posh init pwsh --config "$env:POSH_THEMES_PATH/poshmon.omp.json" | Invoke-Expression
 
 #PSReaderLine
 Set-PSReadLineOption -PredictionViewStyle ListView
